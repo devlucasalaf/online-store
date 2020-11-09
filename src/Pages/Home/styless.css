@@ -152,7 +152,7 @@ div#products-wrapper .product-box {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   div#search-wrapper {
     max-width: 112rem;
     width: 90%;
