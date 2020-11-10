@@ -99,6 +99,27 @@ div#products-wrapper .product-box {
   cursor: pointer;
 }
 
+@keyframes errorMsg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#no-found-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 3rem;
+  color: #808080;
+  animation: errorMsg 1s;
+  font-family: "Open Sans", sans-serif;
+}
+
 .size-qtd-info .size-wrapper {
   width: 10.151rem;
   height: 3.361rem;
