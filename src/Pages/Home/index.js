@@ -171,8 +171,7 @@ const Home = () => {
         })}
         {onCartItems.length !== 0 ?
           <div>
-            <button className='btn-cart go-cart-btn'>Go to the cart</button>
-            <button className='btn-cart finish-buy-btn'>Finish Buy</button>
+            <button className='btn-cart finish-buy-btn'>Go to checkout</button>
           </div>
           :
           <div>
