@@ -321,7 +321,9 @@ div#products-wrapper .product-box {
 }
 
 .btn-cart {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 50%;
   margin: 0 auto;
   height: 3.5rem;
@@ -331,6 +333,7 @@ div#products-wrapper .product-box {
   font-weight: bold;
   font-family: "Open Sans", sans-serif;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .finish-buy-btn {

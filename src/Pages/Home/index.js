@@ -162,41 +162,39 @@ const Home = () => {
     console.log(productsState[sizeIndex].id)
   }
 
+  const cartHandle = () => {
+    if (localStorage.getItem('products') === null) {
+      return
+    } else {
+      let itemsOnCart = JSON.parse(localStorage.getItem('products'))
+      setOnCartItems(itemsOnCart)
+    }
+  }
+
+  const totalValueHandle = () => {
+
+    if (onCartItems.length === 0) {
+      return
+    } else {
+      let newArrWithValues = []
+      for (let i = 0; i < onCartItems.length; i++) {
+        let val = onCartItems[i].price * onCartItems[i].qtd
+        newArrWithValues.push(val)
+      }
+
+      let totalValuesSet = newArrWithValues.reduce((prevItem, currentItem) => {
+        return prevItem + currentItem
+      })
+      setTotalCartValue(totalValuesSet)
+    }
+  }
+
   useEffect(() => {
+    cartHandle()
+    totalValueHandle()
     setIndexUseEffect()
 
-    const cartHandle = () => {
-      if (localStorage.getItem('products') === null) {
-        return
-      } else {
-        let itemsOnCart = JSON.parse(localStorage.getItem('products'))
-        setOnCartItems(itemsOnCart)
-      }
-    }
-    cartHandle()
-
-    const totalValueHandle = () => {
-
-      if (onCartItems.length === 0) {
-        return
-      } else {
-        let newArrWithValues = []
-        for (let i = 0; i < onCartItems.length; i++) {
-          let val = onCartItems[i].price * onCartItems[i].qtd
-          newArrWithValues.push(val)
-        }
-
-        let totalValuesSet = newArrWithValues.reduce((prevItem, currentItem) => {
-          return prevItem + currentItem
-        })
-        setTotalCartValue(totalValuesSet)
-      }
-
-    }
-
-    totalValueHandle()
-
-  }, [indexUseEffect])
+  }, [indexUseEffect, onCartItems])
 
   return (
     <div id='home-container'>
@@ -228,7 +226,7 @@ const Home = () => {
               <strong>Total</strong>
               <span>$ {totalCartValue.toFixed(2)}</span>
             </div>
-            <button className='btn-cart finish-buy-btn'>Checkout</button>
+            <a href='/payment' className='btn-cart finish-buy-btn'>Checkout</a>
           </div>
           :
           <div>
