@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { HiOutlineTrash, HiReceiptRefund } from 'react-icons/hi'
+import { HiOutlineTrash } from 'react-icons/hi'
 import Header from '../../Components/Header'
 import './styless.css'
 import { RiShoppingCartLine } from 'react-icons/ri'
@@ -88,7 +88,7 @@ const Home = () => {
     if (searchValue === '') {
       setNewProducts(products)
     } else if (searchValue !== '') {
-      const productsFound = products.filter((product, index) => {
+      const productsFound = products.filter((product) => {
         const regex = new RegExp(`(${searchValue})`, 'gim')
         return product.name.match(regex)
       })

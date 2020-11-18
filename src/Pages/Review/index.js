@@ -15,7 +15,7 @@ const Review = () => {
     localStorage.clear()
 
     setTimeout(() => {
-      window.location.href = 'http://localhost:3000/'
+      window.location.href = 'https://online-store.devlucasalaf.vercel.app/'
     }, 2000)
   }
 

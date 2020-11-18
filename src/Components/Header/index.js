@@ -7,7 +7,7 @@ const Header = (props) => {
       <div id='header-wrapper'>
         {props.backIcon === undefined ? <div></div> : <a id='back-icon-a' href={props.hrefA}><img id='back-icon' src={props.backIcon} alt='back-icon'></img></a>}
         <p>{props.title}</p>
-        <img id={window.location.href === 'http://localhost:3000/' ? 'avatar-img-home' : 'avatar-img-rest'} src={props.avatarImg} alt='avatar-img'></img>
+        <img id={window.location.href === 'https://online-store.devlucasalaf.vercel.app/' ? 'avatar-img-home' : 'avatar-img-rest'} src={props.avatarImg} alt='avatar-img'></img>
       </div>
     </div >
   )
