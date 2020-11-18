@@ -1,0 +1,411 @@
+div#payment-wrapper .status-buying {
+  display: none;
+}
+
+div#payment-wrapper {
+  margin-top: 3.8rem;
+  width: 90%;
+  min-width: 30rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+#cart-summary {
+  display: none;
+}
+
+#payment-content {
+  margin-bottom: 2rem;
+}
+
+#checkout-p {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.392rem;
+  margin-bottom: 2rem;
+}
+
+.product-info-payment {
+  display: flex;
+  align-items: center;
+  background-color: #f7f7f7;
+  height: 9.7rem;
+  padding: 1.2rem;
+  margin-bottom: 0.7rem;
+  position: relative;
+  border-radius: 0.7rem;
+}
+
+.product-detail {
+  margin-left: 2.5rem;
+}
+
+.product-detail p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  color: #a5a5a5;
+  margin-bottom: 0.7rem;
+}
+
+.product-detail h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.product-info-payment img {
+  width: 10rem;
+  height: 7.247rem;
+  object-fit: cover;
+  border-radius: 0.7rem;
+}
+
+#remove-item-element {
+  font-size: 3.5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0.3rem 0.7rem 0rem 0rem;
+  color: #a5a5a5;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#remove-item-element:hover {
+  color: #dc3333;
+  cursor: pointer;
+}
+
+#delivery-info {
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #c2c2c2;
+  padding-bottom: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+#delivery-info p {
+  font-size: 1.3rem;
+  color: #979797;
+  margin-bottom: 0.5rem;
+}
+
+#delivery-info span {
+  font-size: 1.3rem;
+  display: inline-block;
+  color: #212121;
+  margin-bottom: 0.5rem;
+}
+
+#cost-info {
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+#delivery {
+  display: flex;
+}
+
+#delivery :nth-child(2) {
+  margin-left: 3rem;
+}
+
+#cost-info p {
+  font-size: 1.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #a5a5a5;
+  margin-bottom: 0.5rem;
+}
+
+#cost-info span {
+  display: block;
+  font-size: 1.3rem;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+#subtotal {
+  display: flex;
+}
+
+#subtotal :nth-child(2) {
+  margin-left: 3rem;
+}
+
+#final-value {
+  position: absolute;
+  text-align: center;
+  right: 0;
+  top: 0;
+  margin-top: 2rem;
+}
+
+#final-value p {
+  color: black;
+  font-weight: bold;
+}
+
+#final-value strong {
+  font-size: 2rem;
+}
+
+#payment-method-info {
+  background-color: #f7f7f7;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  margin-bottom: 2rem;
+}
+
+#payment-method-info span {
+  display: block;
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+#payment-method-info .method-div span {
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: #9e7d27;
+  background: #ffcc00;
+  width: 6.3rem;
+  height: 1.6rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: -0.7rem;
+  margin-left: 2rem;
+}
+
+.method-div {
+  width: 90%;
+  height: 6rem;
+  min-width: 28rem;
+  max-width: 66.3rem;
+  position: relative;
+  background-color: white;
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1rem;
+}
+
+.method-div p {
+  font-size: 1.3rem;
+  font-family: "Open Sans", sans-serif;
+  margin-left: 2rem;
+}
+
+.method-div img {
+  margin-right: 1rem;
+}
+
+.method-btn {
+  position: absolute;
+  display: block;
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.method-btn:focus-within {
+  border: 2px solid #63b55c;
+}
+
+#continue-btn {
+  width: 100%;
+  color: white;
+  border-radius: 0.7rem;
+  border: none;
+  outline: none;
+  background-color: #6b8067;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem;
+  height: 4.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#continue-btn:hover {
+  background: #546a50;
+}
+
+#product-price {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+}
+
+@media (min-width: 1024px) {
+  div#payment-wrapper .status-buying {
+    width: 85.9rem;
+    height: 2rem;
+    margin: 4.699rem auto 0rem auto;
+    border-bottom: 1px solid #e8e8e8;
+    position: relative;
+    display: block;
+  }
+
+  div#payment-wrapper {
+    margin-top: 3.8rem;
+    width: 90%;
+    min-width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .green-circle-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .green-circle-div p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+  }
+
+  .green-circle {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: #61cb46;
+  }
+
+  .green-circle-off {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: #e8e8e8;
+  }
+
+  .green-circle-left {
+    position: absolute;
+    left: 0;
+    margin-left: -1.5rem;
+    margin-top: 1.25rem;
+  }
+
+  .green-circle-middle {
+    position: absolute;
+    left: 50%;
+    margin-left: -6rem;
+    margin-top: 1.25rem;
+  }
+
+  .green-circle-right {
+    position: absolute;
+    right: 0;
+    margin-right: -2rem;
+    margin-top: 1.25rem;
+  }
+
+  #cart-summary {
+    display: block;
+    font-size: 3rem;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+  }
+
+  #checkout-p {
+    display: none;
+    font-weight: 400;
+  }
+
+  #payment-content-wrapper {
+    margin-top: 8.1rem;
+    display: flex;
+  }
+  #products-content {
+    width: 40%;
+    padding-right: 2rem;
+  }
+
+  .product-info-payment {
+    background: white;
+    border-bottom: 1px solid #f7f7f7;
+    margin-bottom: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  #payment-content {
+    background: #f7f7f7;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    width: 60%;
+  }
+
+  #delivery-cost-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #delivery-cost-info span {
+    font-size: 2rem;
+    color: black;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  #final-value {
+    display: flex;
+    margin-top: 9rem;
+  }
+
+  #final-value strong {
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  #final-value p {
+    color: #979797;
+    margin-top: 1.9rem;
+    margin-right: 2.8rem;
+  }
+
+  #delivery-info {
+    border: none;
+  }
+
+  #delivery {
+    justify-content: space-between;
+  }
+
+  .method-div {
+    width: 100%;
+    height: 6rem;
+    min-width: none;
+    max-width: none;
+    position: relative;
+    background-color: white;
+    margin-bottom: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1rem;
+  }
+  #continue-btn {
+    width: 40%;
+    float: right;
+    margin-right: 1rem;
+  }
+  #payment-method-info {
+    margin-bottom: 0rem;
+  }
+}

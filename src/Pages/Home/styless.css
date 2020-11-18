@@ -337,14 +337,14 @@ div#products-wrapper .product-box {
 }
 
 .finish-buy-btn {
-  background: #6b8067;
+  background: #6678ff;
   color: white;
   width: 100%;
   transition: 0.3s;
 }
 
 .finish-buy-btn:hover {
-  background: #546a50;
+  background: #495eff;
 }
 
 .no-products-on-cart {

@@ -189,12 +189,22 @@ const Home = () => {
     }
   }
 
+  const attTotalValue = () => {
+    if (totalCartValue === 0) {
+      totalValueHandle()
+    } else {
+      return
+    }
+  }
+
+  attTotalValue()
+
   useEffect(() => {
     cartHandle()
     totalValueHandle()
     setIndexUseEffect()
 
-  }, [indexUseEffect, onCartItems])
+  }, [indexUseEffect])
 
   return (
     <div id='home-container'>
