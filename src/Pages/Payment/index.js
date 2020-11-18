@@ -67,7 +67,7 @@ const Payment = () => {
     if (localStorage.getItem('payment-method') === null) {
       alert('You must to select a payment method.')
     } else {
-      window.location.href = 'http://localhost:3000/review'
+      window.location.href = 'https://online-store.devlucasalaf.vercel.app/review'
     }
   }
 
