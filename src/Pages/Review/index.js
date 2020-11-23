@@ -7,15 +7,18 @@ const Review = () => {
   const [onCartItems, setOnCartItems] = useState([])
   const [totalCartValue, setTotalCartValue] = useState(0)
   const [indexUseEffect, setIndexUseEffect] = useState()
+  const [placeOrderStatus, setPlaceOrderStatus] = useState(false)
 
 
   const paymentMethodChoosed = localStorage.getItem('payment-method')
 
   const handlePlaceOrder = () => {
-    localStorage.clear()
+    setPlaceOrderStatus(!placeOrderStatus)
+
 
     setTimeout(() => {
       window.location.href = 'https://online-store.devlucasalaf.vercel.app/'
+      localStorage.clear()
     }, 2000)
   }
 
@@ -116,10 +119,16 @@ const Review = () => {
               </div>
               <p id='final-value-review'>${totalCartValue}</p>
             </div>
-            <button onClick={handlePlaceOrder} id='place-order-btn-desktop'>Place order</button>
+            {placeOrderStatus === false
+              ? <button onClick={handlePlaceOrder} id='place-order-btn-desktop'>Place order</button>
+              : <div className='loading-div-desktop'></div>
+            }
           </div>
         </div>
-        <button onClick={handlePlaceOrder} id='place-order-btn-mobile'>Place order</button>
+        {placeOrderStatus === false
+          ? <button onClick={handlePlaceOrder} id='place-order-btn-mobile'>Place order</button>
+          : <div className='loading-div-mobile'></div>
+        }
       </div>
     </div>
   )

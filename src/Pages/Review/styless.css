@@ -129,6 +129,39 @@ div#review-wrapper .status-buying {
   display: none;
 }
 
+@keyframes loading-effect {
+  from {
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.loading-div-desktop {
+  width: 5rem;
+  height: 5rem;
+  border-top: 4px solid rgb(12, 79, 42);
+  border-radius: 50%;
+  animation: loading-effect 1s infinite;
+  position: absolute;
+  right: 50%;
+  margin-right: -2.5rem;
+  margin-top: 3rem;
+  display: none;
+}
+
+.loading-div-mobile {
+  width: 5rem;
+  height: 5rem;
+  border-top: 4px solid rgb(12, 79, 42);
+  border-radius: 50%;
+  animation: loading-effect 1s infinite;
+  position: absolute;
+  right: 50%;
+  margin-right: -2.5rem;
+  margin-top: 3rem;
+}
+
 @media (min-width: 1024px) {
   div#review-wrapper .status-buying {
     width: 85.9rem;
@@ -180,5 +213,13 @@ div#review-wrapper .status-buying {
   }
   #place-order-btn-desktop:hover {
     background: #546a50;
+  }
+
+  .loading-div-desktop {
+    display: block;
+  }
+
+  .loading-div-mobile {
+    display: none;
   }
 }
